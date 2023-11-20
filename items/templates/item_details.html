@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block body %}
+  <h1 class="mt-3">Item details</h1>
+  <div class="col-12">
+    <div class="row">
+      <div class="card text-bg-primary me-3 mt-3">
+        <div class="card-header">{{ item.title }}</div>
+        <div class="card-body">
+          <p class="text-dark">{{ item.category }}
+            -
+            {{ item.brand }}
+            -
+            {{ item.origin }}</p>
+          <hr>
+          <h5 class="card-title">{{ item.description }}</h5>
+          <hr>
+          <p class="text-dark">{{ item.price }}€ Discount -{{ item.discount }}%</p>
+          <a href="#" class="btn btn-success">To Cart</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock body %}

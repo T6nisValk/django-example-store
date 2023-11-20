@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block body %}
+  {% if form.errors %}
+    <p class="mt-2">Login failed!</p>
+  {% endif %}
+  <div class="row">
+    <div class="col-4">
+      <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="username" class="form-label mt-3">
+            <h4>Username</h4>
+          </label>
+          <input type="text" class="form-control" id="username" name="username">
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">
+            <h4>Password</h4>
+          </label>
+          <input type="password" class="form-control" id="password" name="password">
+        </div>
+        <button class="btn btn-primary">Log In</button>
+      </form>
+    </div>
+  </div>
+{% endblock body %}
